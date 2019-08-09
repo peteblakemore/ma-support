@@ -1,0 +1,79 @@
+{% extends "layout.html" %}
+
+{% set serviceName = "Manage apprenticeships" %}
+
+{% block pageTitle %}
+Do you want to review the agreement now?
+{% endblock %}
+
+{% block beforeContent %}
+
+{% from "back-link/macro.njk" import govukBackLink %}
+
+{{ govukBackLink({
+  text: "Back",
+  href: "javascript:history.back()"
+}) }}
+{% endblock %}
+
+{% from "inset-text/macro.njk" import govukInsetText %}
+
+{% set _orgName = data['orgName'] or "ASSURANCE AEROSPACE LTD" %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+        <h1 class="govuk-heading-xl">Do you want to review the employer agreement now?</h1>
+
+        <p class="govuk-body">The agreement is between {{_orgName}} and the Education and Skills Funding Agency (ESFA). {{_orgName}} cannot get or reserve funding until it accepts the agreement.</p>
+
+        <h2 class="govuk-heading-m">Important features of the agreement</h2>
+        <p class="govuk-body">{{_orgName}} must:</p>
+        <ul class="govuk-list govuk-list--bullet">
+            <li>only use the funding in its apprenticeship service account to train and assess apprentices</li>
+            <li>have a contract with its training providers so they can carry out apprenticeship training</li>
+            <li>follow the apprenticeship funding rules</li>
+        </ul>
+        <p class="govuk-body">The ESFA can:</p>
+        <ul class="govuk-list govuk-list--bullet">
+            <li>suspend payments, recover funds or close {{_orgName}}’s account if it breaks the agreement</li>
+            <li>change the terms of the agreement (if this happens, we will ask {{_orgName}} to accept the new terms)</li>
+            <li>change any part of the apprenticeship service</li>
+        </ul>
+        
+        {{ govukInsetText({
+            text: "You can continue registering without reviewing the agreement."
+        }) }}
+
+        <form method="post" class="form">
+
+            {% from "radios/macro.njk" import govukRadios %}
+            {% from "input/macro.njk" import govukInput %}
+            
+            {{ govukRadios({
+                idPrefix: "agreementCheck",
+                name: "agreementCheck",
+                fieldset: {
+                },
+                items: [
+                {
+                    value: "no",
+                    text: "No, I’ll review the agreement later"
+                },
+                {
+                    value: "yes",
+                    text: "Yes, I’ll review the agreement now"
+                }
+                ]
+            }) }}
+    
+            <button class="govuk-button">Continue</button>
+
+        </form>
+
+    </div>
+</div>
+
+{% endblock %}

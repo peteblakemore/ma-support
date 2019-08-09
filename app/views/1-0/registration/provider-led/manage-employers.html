@@ -1,0 +1,72 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Manage apprenticeships
+{% endblock %}
+
+{% set serviceName = "Manage apprenticeships" %}
+{% block content %}
+<style>
+        .govuk-header__container{
+            border-bottom: 10px solid #fd7742;  
+        }
+    </style>
+
+<h1 class="govuk-heading-xl">Manage your employers</h1>
+
+
+<table class="govuk-table">
+        <!-- <caption class="govuk-table__caption">Month you apply</caption> -->
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">Account name</th>
+            <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">Name</th>
+            <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">Email</th>         
+            <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">Status</th>             
+            <!-- <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">Agreement ID</th>      
+            <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">Permission(s)</th> -->
+            <th scope="col" class="govuk-table__header govuk-!-width-one-quarter"></th>            
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Design Schmesign</th>
+            <td class="govuk-table__cell">Michael Combs</td>
+            <td class="govuk-table__cell">michael.combs@designsch.com</td>
+            <td class="govuk-table__cell"><strong class="govuk-tag govuk-phase-banner__content__tag">Live</strong></td>                   
+            <!-- <td class="govuk-table__cell">XEP592</td>
+            <td class="govuk-table__cell">4 permissions set</td> -->
+            <td class="govuk-table__cell"><a href="manage-employers-more-details" class="govuk-link govuk-link--no-visited-state">View</a></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Larry Corp</th>            
+            <td class="govuk-table__cell">George Mitch</td>
+            <td class="govuk-table__cell">georgemitch@larrycorp.com</td>
+            <td class="govuk-table__cell">Unstarted by employer</td>
+            <!-- <td class="govuk-table__cell">- -</td>
+            <td class="govuk-table__cell">No permission set</td> -->
+            <td class="govuk-table__cell"><a href="manage-employers-more-details-larry" class="govuk-link govuk-link--no-visited-state">View</a></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Mike Larry Associates</th>
+            <td class="govuk-table__cell">Kerry Miller</td>
+            <td class="govuk-table__cell">kerrym@mla.co.uk</td>
+            <td class="govuk-table__cell"><strong class="govuk-tag govuk-phase-banner__content__tag">Live</strong></td> 
+            <!-- <td class="govuk-table__cell">2EPD9X</td>
+            <td class="govuk-table__cell">2 permissions set</td> -->
+            <td class="govuk-table__cell"><a href="#" class="govuk-link govuk-link--no-visited-state">View</a></td>
+          </tr>
+          <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header">Ray of Design</th>
+                <td class="govuk-table__cell">Jason Moore</td>
+                <td class="govuk-table__cell">jason.moore@rod.com</td>
+                <td class="govuk-table__cell">In progress</td>
+                <!-- <td class="govuk-table__cell">- -</td>
+                <td class="govuk-table__cell">5 permissions set</td> -->
+                <td class="govuk-table__cell"><a href="#" class="govuk-link govuk-link--no-visited-state">View</a></td>
+           </tr>
+        </tbody>
+      </table>
+
+
+{% endblock %}

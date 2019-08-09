@@ -1,0 +1,278 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Registration team prototypes
+{% endblock %}
+
+{% block content %}
+
+{% from "phase-banner/macro.njk" import govukPhaseBanner %}
+{{ govukPhaseBanner({
+  tag: {
+    text: "prototypes"
+  },
+  html: 'This is a new service – your feedback will help us to improve it.'
+}) }}
+
+<style>
+.app-task-list__task-name {
+  width: 70%
+}
+</style>
+
+<div class="govuk-width-container">
+
+  <main class="govuk-main-wrapper">
+
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <div class="govuk-width-container">
+        
+          <main class="govuk-main-wrapper govuk-main-wrapper--l" id="main-content" role="main">
+            <div class="govuk-grid-row">
+              <div class="govuk-grid-column-two-thirds">
+                <h1 class="govuk-heading-xl">
+                  Employer Registration
+                </h1>
+                
+                <ol class="app-task-list">
+                  <li>
+                    <h2 class="app-task-list__section">
+                      <span class="app-task-list__section-number">1. </span> Full registration journey
+                    </h2>
+                    <ul class="app-task-list__items">
+                      <li class="app-task-list__item">
+                        <a class="app-task-list__task-name" href="/1-0/registration/index" aria-describedby="read-declaration-completed">
+                          Employer started registration - 1-0
+                        </a>
+                        <strong style="background: #f47738" class="govuk-tag app-task-list__task-completed" id="read-declaration-completed">In progress</strong>
+                      </li>
+
+                      <li class="app-task-list__item">
+                          <span class="app-task-list__task-name" >
+                            Employer started registration - 1-0 (compliance team)
+                            <ul class="govuk-list govuk-list--bullet" style="margin-bottom: 0">
+                                <li><a class="govuk-link govuk-link--no-visited-state" href="/1-0/registration/index?team=compliance" >
+                                  'Create account' start
+                                </a></li>
+                              </ul>
+                          </span>
+                          <span class="app-task-list__task-name">
+                            Tested - 18, 19, 20 June
+                          </span>
+                          <strong class="govuk-tag app-task-list__task-completed" id="read-declaration-completed">Tested</strong>
+                      </li>
+
+                      <li class="app-task-list__item">
+                        <span class="app-task-list__task-name" >
+                          Employer started registration - 4-0 (compliance team)
+                          <ul class="govuk-list govuk-list--bullet" style="margin-bottom: 0">
+                              <li><a class="govuk-link govuk-link--no-visited-state" href="/4-0/registration/index" >
+                                'Create account' start
+                              </a></li>
+                            </ul>
+                        </span>
+                        <span class="app-task-list__task-name">
+                          Tested - 15, 16 July
+                        </span>
+                        <strong class="govuk-tag app-task-list__task-completed" id="read-declaration-completed">Tested</strong>
+                      </li>
+
+                      <li class="app-task-list__item">
+                          <span class="app-task-list__task-name">
+                              Employer started registration - 4-1 (compliance team)
+                              <ul class="govuk-list govuk-list--bullet" style="margin-bottom: 0">
+                                <li><a class="govuk-link govuk-link--no-visited-state" href="/4-1/registration/index" >
+                                  'Create account' start
+                                </a></li>
+                                <li><a class="govuk-link govuk-link--no-visited-state" href="/4-1/registration/gov-apprenticeships-guide" >
+                                  'Apprenticeships guide' start
+                                </a></li>
+                                <li><a class="govuk-link govuk-link--no-visited-state" href="/4-1/registration/google" >
+                                  'Google' start
+                                </a></li>
+                              </ul>
+                          </span>
+                          <span class="app-task-list__task-name">
+                            Tested ???
+                          </span>
+                          <strong style="background: #f47738" class="govuk-tag app-task-list__task-completed" >In progress</strong>
+                        </li>
+
+                      <!-- <li class="app-task-list__item">
+                          <a class="app-task-list__task-name" href="/1-0/registration/account-lock/pensionsReg" aria-describedby="read-declaration-completed">
+                            Account locked
+                          </a>
+                          <strong class="govuk-tag app-task-list__task-completed" id="read-declaration-completed">UR REQUIRED</strong>
+                        </li>
+
+                        <li class="app-task-list__item">
+                            <a class="app-task-list__task-name" href="/1-0/registration/account-lock/homepage-addPAYE" aria-describedby="read-declaration-completed">
+                              Account locked from CTA page
+                            </a>
+                            <strong class="govuk-tag app-task-list__task-completed" id="read-declaration-completed">UR REQUIRED</strong>
+                          </li>
+
+                        <li class="app-task-list__item">
+                            <a class="app-task-list__task-name" href="/1-0/registration/account-lock/pensionsRegFormat" aria-describedby="read-declaration-completed">
+                              Incorrect format
+                            </a>
+                            <strong class="govuk-tag app-task-list__task-completed" id="read-declaration-completed">UR REQUIRED</strong>
+                          </li> -->
+                    </ul>
+                  </li>
+                  <li>
+                    <h2 class="app-task-list__section">
+                      <span class="app-task-list__section-number">2. </span> Provider-led registration
+                    </h2>
+                    <ul class="app-task-list__items">
+                      <li class="app-task-list__item">
+                        <a class="app-task-list__task-name" href="/1-0/registration/provider-led/" aria-describedby="company-information-completed">
+                          Provider invites employer
+                        </a>
+                        <strong style="background: #f47738" class="govuk-tag app-task-list__task-completed" id="company-information-completed">In progress</strong>
+                      </li>
+                      <li class="app-task-list__item">
+                        <a class="app-task-list__task-name" href="/1-0/registration/provider-led/provider-invitation-email" aria-describedby="contact-details-completed">
+                          Employer continues set up
+                        </a>
+                        <strong style="background: #f47738" class="govuk-tag app-task-list__task-completed" id="contact-details-completed">In progress</strong>
+                      </li>
+
+                    </ul>
+                  </li>
+                  <li>
+                    <h2 class="app-task-list__section">
+                      <span class="app-task-list__section-number">3. </span> Homepage variants - (CI Team)
+                    </h2>
+                    <ul class="app-task-list__items">
+                      <li class="app-task-list__item">
+                        <a class="app-task-list__task-name" href="3-0/homepage-with-other-task" aria-describedby="company-information-completed">
+                          Homepage with other task tab
+                        </a>
+                        <strong class="govuk-tag app-task-list__task-completed" id="company-information-completed">UR required</strong>
+                      </li>
+                      <li class="app-task-list__item">
+                        <a class="app-task-list__task-name" href="3-0/homepage-with-apprentice-tab" aria-describedby="company-information-completed">
+                          Homepage with apprentice tabs
+                        </a>
+                        <strong class="govuk-tag app-task-list__task-completed" id="company-information-completed">UR required</strong>
+                      </li>
+                      <li class="app-task-list__item">
+                        <a class="app-task-list__task-name" href="3-0/homepage-one-apprentice" aria-describedby="company-information-completed">
+                          Homepage with one apprentice
+                        </a>
+                        <strong class="govuk-tag app-task-list__task-completed" id="company-information-completed">UR required</strong>
+                      </li>
+                      <li class="app-task-list__item">
+                        <a class="app-task-list__task-name" href="1-0/registration/interim-homepage" aria-describedby="contact-details-completed">
+                          Interim homepage - August release
+                        </a>
+                        <strong style="background: #85994b" class="govuk-tag app-task-list__task-completed" id="contact-details-completed">final</strong>
+                      </li>
+
+                    </ul>
+                  </li>
+
+                  <!-- <li>
+                    <h2 class="app-task-list__section">
+                      <span class="app-task-list__section-number">4. </span> End to end journey - for demo purposes only
+                    </h2>
+                    <ul class="app-task-list__items">
+                      <li class="app-task-list__item">
+                        <a class="app-task-list__task-name" href="https://das-registration-prototype.herokuapp.com/directEmployer" aria-describedby="company-information-completed">
+                          Employer-led
+                        </a>
+                        <strong style="background: #f47738" class="govuk-tag app-task-list__task-completed" id="company-information-completed">In progress</strong>
+                      </li>
+                      <li class="app-task-list__item">
+                        <a class="app-task-list__task-name" href="#" aria-describedby="contact-details-completed">
+                          Provider
+                        </a>
+                        <strong style="background: #f47738" class="govuk-tag app-task-list__task-completed" id="contact-details-completed">In progress</strong>
+                      </li> 
+                      <li class="app-task-list__item">
+                        <a class="app-task-list__task-name" href="/2-0/provider-led-registration/" aria-describedby="contact-details-completed">
+                          Provider-led
+                        </a>
+                        <strong style="background: #f47738" class="govuk-tag app-task-list__task-completed" id="contact-details-completed">In progress</strong>
+                      </li>
+
+                      <li class="app-task-list__item">
+                        <a class="app-task-list__task-name" href="https://esfa-create-apprenticeship.herokuapp.com/approve/sprint-05/research/employers/employer-approve/email" aria-describedby="contact-details-completed">
+                          Email-triggered approval
+                        </a>
+                        <strong style="background: #f47738" class="govuk-tag app-task-list__task-completed" id="contact-details-completed">In progress</strong>
+                      </li>
+
+                    </ul>
+                  </li> -->
+                </ol>
+              </div>
+            </div>
+          </main>
+          
+        </div>
+      </div>
+
+      <div class="govuk-grid-column-one-third">
+        <h2 class="govuk-heading-m">Change logs</h2>
+
+        {% from "accordion/macro.njk" import govukAccordion %}
+
+        {{ govukAccordion({
+          id: "accordion-with-summary-sections",
+          items: [
+            {
+              heading: {
+                text: "Employer registration"
+              },
+              summary: {
+                text: "Key changes made to the registration journey."
+              },
+              content: {
+                html: 
+                '<ul class="govuk-list">
+                    <li>
+                      <a class="govuk-link" href="1-0/change-log/change-log">Change log</a>
+                    </li>
+
+                </ul>'
+              }
+            },
+                {
+              heading: {
+                text: "Provider-led registration"
+              },
+              summary: {
+                text: "Key changes made to the provider-led registration journey."
+              },
+              content: {
+                html:
+                '<ul class="govuk-list">
+                    <li>
+                      <a class="govuk-link" href="2-0/change-log/change-log">Change log</a>
+                    </li>
+
+                </ul>'
+              }
+            }
+
+          ]
+        }) }}
+
+      </div>
+    </div>
+
+  </main>
+</div>
+
+
+
+
+
+
+
+
+{% endblock %}

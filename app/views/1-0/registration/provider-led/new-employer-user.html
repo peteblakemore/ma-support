@@ -1,0 +1,59 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Manage apprenticeships
+{% endblock %}
+
+{% set serviceName = "Manage apprenticeships" %}
+{% set backLinkHref = "employer-permission" %}
+
+{% block content %}
+
+<style>
+    .govuk-header__container{
+        border-bottom: 10px solid #fd7742;  
+    }
+</style>
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-xl">
+            Enter the employer details
+        </h1>
+        <p>Enter the details for the employer. Once the account is created, the employer will be able to add other users.</p>
+          <br>
+        <div class="govuk-form-group">
+            <div class="govuk-form-group">
+                 <label class="govuk-label" for="providerRegisterEmail">
+                      Account name
+                  </label>
+                <input class="govuk-input" id="providerRegisterEmail" name="providerRegisterEmail" type="providerRegisterEmail">
+            </div>        
+          <div class="govuk-form-group">
+              <label class="govuk-label" for="providerRegisterFirstName">
+                 First name
+              </label>
+              <input class="govuk-input" id="providerRegisterFirstName" name="providerRegisterFirstName" type="text">
+          </div>
+          <div class="govuk-form-group">
+              <label class="govuk-label" for="providerRegisterLastName">
+                 Last name
+              </label>
+              <input class="govuk-input" id="providerRegisterLastName" name="providerRegisterLastName" type="text">
+          </div>
+          <div class="govuk-form-group">
+              <label class="govuk-label" for="providerRegisterEmail">
+                 Email address
+              </label>
+              <span id="email-hint" class="govuk-hint">
+                We'll send an email to the employer to confirm their identity.
+            </span>
+              <input class="govuk-input" id="providerRegisterEmail" name="providerRegisterEmail" type="providerRegisterEmail">
+          </div>
+
+        </div>
+        <a href="review-details" class="govuk-button">Continue</a>
+    </div>
+</div>
+
+{% endblock %}

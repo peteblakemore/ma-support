@@ -1,0 +1,40 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Manage apprenticeships
+{% endblock %}
+
+{% set serviceName = "Manage apprenticeships" %}
+{% set backLinkHref = "index" %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-xl">
+            Have you used this service before?
+        </h1>
+        <div class="govuk-form-group">
+
+          <div class="govuk-radios ">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="usedService-1" name="usedService" type="radio" value="true" data-com.agilebits.onepassword.user-edited="yes">
+              <label class="govuk-label govuk-radios__label" for="usedService-1">
+                Yes, I've used this service before
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="usedService-2" name="usedService" type="radio" value="false" data-com.agilebits.onepassword.user-edited="yes">
+              <label class="govuk-label govuk-radios__label" for="usedService-2">
+                No, this is my first time
+              </label>
+            </div>
+          </div>
+
+        </div>
+        <a href="new-user" class="govuk-button">Continue</a>
+
+    </div>
+</div>
+
+{% endblock %}

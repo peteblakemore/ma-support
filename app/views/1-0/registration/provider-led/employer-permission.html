@@ -1,0 +1,60 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Manage apprenticeships
+{% endblock %}
+
+{% set serviceName = "Manage apprenticeships" %}
+{% set backLinkHref = "startAccountSetup" %}
+
+{% block content %}
+
+<style>
+    .govuk-header__container{
+        border-bottom: 10px solid #fd7742;  
+    }
+</style>
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <form method="post" class="form">
+           <h1 class="govuk-heading-xl">
+            Do you have the employer's permission to set up this account?
+           </h1>
+<!--  <p class="govuk-body">Before you can set up an account for an employer, you need to make sure you have permission.</p>
+
+           {% from "warning-text/macro.njk" import govukWarningText %}
+
+           {{ govukWarningText({
+             text: "You must have permission from the employer to set up this account.",
+             iconFallbackText: "Warning"
+           }) }} -->
+
+
+            {% from "radios/macro.njk" import govukRadios %}
+
+            {{ govukRadios({
+              idPrefix: "permission-training-provider",
+              name: "permission-training-provider",
+              fieldset: {
+
+              },
+              items: [
+                {
+                  value: "yesGive",
+                  text: "Yes"
+                },
+                {
+                  value: "noDont",
+                  text: "No, take me back to the homepage"
+                }
+              ]
+            }) }}
+
+           <button class="govuk-button" type="submit">Continue</button>
+
+</form>
+    </div>
+</div>
+
+{% endblock %}

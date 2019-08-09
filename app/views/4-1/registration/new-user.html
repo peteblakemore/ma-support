@@ -1,0 +1,63 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Manage apprenticeships
+{% endblock %}
+
+{% set serviceName = "Manage apprenticeships" %}
+{% set backLinkHref = "index" %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-one-half">
+        <h1 class="govuk-heading-xl">
+            Set up as a user
+        </h1>
+        <p>If you already have an account <a href="signin">sign in</a></p>
+        <div class="govuk-form-group">
+          <div class="govuk-form-group">
+              <label class="govuk-label" for="providerRegisterFirstName">
+                 First name
+              </label>
+              <input class="govuk-input" id="providerRegisterFirstName" name="providerRegisterFirstName" type="text">
+          </div>
+          <div class="govuk-form-group">
+              <label class="govuk-label" for="providerRegisterLastName">
+                 Last name
+              </label>
+              <input class="govuk-input" id="providerRegisterLastName" name="providerRegisterLastName" type="text">
+          </div>
+          <div class="govuk-form-group">
+              <label class="govuk-label" for="providerRegisterEmail">
+                 Email
+              </label>
+              <span id="email-hint" class="govuk-hint">
+              We'll send you an email to confirm your identity.
+            </span>
+              <input class="govuk-input" id="providerRegisterEmail" name="providerRegisterEmail" type="providerRegisterEmail">
+          </div>
+            <div class="govuk-form-group">
+              <label class="govuk-label" for="password">
+                 Create a password
+              </label>
+              <span id="password-hint" class="govuk-hint">
+                Password requires upper and lowercase letters, a number and at least 8 characters.
+            </span>
+              <input class="govuk-input" id="password" name="password" type="password">
+          </div>
+            <div class="govuk-form-group">
+              <label class="govuk-label bold-label govuk-!-width-three-quarters" for="confirmPassword">
+                 Confirm password
+              </label>
+              <input class="govuk-input" id="confirmPassword" name="confirmPassword" type="password">
+          </div>
+            <div class="govuk-inset-text">
+              By continuing you accept the <a href="terms" target="blank" class="govuk-link--no-visited-state">terms and conditions</a>
+            </div>
+        </div>
+        <a href="confirmation" class="govuk-button">Set me up</a>
+    </div>
+</div>
+
+{% endblock %}

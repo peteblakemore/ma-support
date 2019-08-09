@@ -1,0 +1,110 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Manage apprenticeships
+{% endblock %}
+
+{% set serviceName = "Manage apprenticeships" %}
+{% set backLinkHref = "manage-employers" %}
+{% block content %}
+<style>
+        .govuk-header__container{
+            border-bottom: 10px solid #fd7742;  
+        }
+    </style>
+
+<h1 class="govuk-heading-xl" style="margin-bottom: 0;">Design Schmesign Ltd</h1>
+
+
+<div class="govuk-width-container">
+
+  <main class="govuk-main-wrapper">
+
+    <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+    <dl class="govuk-summary-list">
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Name
+        </dt>
+        <dd class="govuk-summary-list__value">
+          Michael Combs
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="#">
+            Change<span class="govuk-visually-hidden"> name</span>
+          </a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Email address
+        </dt>
+        <dd class="govuk-summary-list__value">
+          <p class="govuk-body">michael.combs@designsch.com</p>
+          <a href="#" class="govuk-link">Resend email to employer</a>        
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="#">
+            Change<span class="govuk-visually-hidden"> date of birth</span>
+          </a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Permissions
+        </dt>
+        <dd class="govuk-summary-list__value">
+          <ul class="govuk-list">
+            <li>Reserve funding</li>
+            <li>Create cohort</li>
+            <li>Shortlist candidates</li>
+            <li>Create vacancies</li>
+          </ul>
+        </dd>
+    
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="#">
+            <span class="govuk-visually-hidden">Change contact information</span>
+          </a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Agreement
+        </dt>
+        <dd class="govuk-summary-list__value">
+          <p class="govuk-body">Signed by Michael Combs</p>
+          <p class="govuk-body">Agreement ID: XGSF5G</p>
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="#">
+            <span class="govuk-visually-hidden">Change contact details</span>
+          </a>
+        </dd>
+        
+      </div>
+      <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Status
+          </dt>
+          <dd class="govuk-summary-list__value">
+              <strong class="govuk-tag govuk-phase-banner__content__tag">Live</strong>
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="#">
+              <span class="govuk-visually-hidden">Change contact details</span>
+            </a>
+          </dd>
+          
+        </div>
+    </dl>
+  </div>
+</div>
+  </main>
+</div>
+
+
+
+
+{% endblock %}

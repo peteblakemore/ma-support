@@ -1,0 +1,57 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Manage apprenticeships
+{% endblock %}
+
+{% set serviceName = "Manage apprenticeships" %}
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+           <h1 class="govuk-heading-xl">
+              Allow ABC Training Ltd to manage apprenticeships?
+           </h1>
+
+           <p>You can give ABC Training Ltd permission to:</p>
+
+           <ul class="govuk-list govuk-list--bullet">
+              <li>reserve apprenticeship funding on your behalf</li>
+              <li>add and manage your apprenticeships</li>
+           </ul>
+           <p>You’ll still have final approval on any decision-making</p>
+
+            <br>
+
+            <div class="govuk-form-group">
+                <fieldset class="govuk-fieldset">
+                  <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+                    <h1 class="govuk-fieldset__heading">
+                        Give ABC Training Ltd permission to manage your apprenticeships?
+                    </h1>
+                  </legend>
+                  <div class="govuk-radios">
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="manage-apprenticeship-yes" name="manage-apprenticeship-yes" type="radio" value="yesGivePermission">
+                      <label class="govuk-label govuk-radios__label" for="manage-apprenticeship-yes">
+                          Yes, I give them permission
+                      </label>
+                    </div>
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="manage-apprenticeship-no" name="manage-apprenticeship-no" type="radio" value="noDontGivePermission">
+                      <label class="govuk-label govuk-radios__label" for="manage-apprenticeship-no">
+                          No, I’ll manage them myself
+                      </label>
+                    </div>
+
+                  </div>
+                </fieldset>
+              </div>
+              <!-- <button class="govuk-button">Continue</button> -->
+          <a href="changePermissionsRecruit" class="govuk-button">Continue</a>
+        <p style="padding-top:20px">
+    </div>
+</div>
+
+{% endblock %}

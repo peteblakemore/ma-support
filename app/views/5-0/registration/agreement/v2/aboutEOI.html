@@ -1,0 +1,39 @@
+{% extends "layout.html" %}
+
+{% block beforeContent %}
+{% from "back-link/macro.njk" import govukBackLink %}
+
+<!-- {{ govukBackLink({
+  text: "Back",
+  href: "/1-0/registration/check-your-details"
+}) }} -->
+
+{% endblock %}
+{% block content %}
+
+<div class="govuk-width-container">
+  <main class="govuk-main-wrapper govuk-main-wrapper--l">
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <form action="updatedagreement" method="get" class="form">
+        <span class="govuk-caption-xl">Assurance Aerospace Ltd</span>
+     <h1 class="govuk-heading-xl">About this document</h1>
+
+
+        </h1>
+        <p>This document details our requirements of your organisation during the private beta testing period. This is not a contract, but the ESFA expects that when you have signed it, you will comply with its terms.</p>
+        <p></p>
+          
+        <p>You’ll need to have authority from your organisation before you sign this.</p>
+
+
+        <div class="govuk-form-group">
+        <!-- <button class="govuk-button">Continue to your agreement</button> -->
+        <a href="/5-0/registration/agreement/v2/MoU" class="govuk-button">Continue to the document</a>
+      </form>
+
+    </div>
+  </div>
+      </div>
+  </div>
+{% endblock %}

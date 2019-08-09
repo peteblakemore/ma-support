@@ -1,0 +1,62 @@
+{% extends "layout-email.html" %}
+
+{% block pageTitle %}
+Your emails
+{% endblock %}
+
+{% block content %}
+<p>
+	Dear Joe Bloggs, 
+</p>
+
+<p>
+	John Barnes at ABC Training Limited has invited you to register for an Apprenticeship Service account. 
+</p>
+
+<p>
+	Registering for an account gives you access to funding to pay for apprenticeship training. 
+</p>
+
+<p>
+	You'll also be able to post apprenticeship vacancies on our free apprenticeships job site. 
+</p>
+
+<hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+<br>
+<h2 class="govuk-heading-m">What you'll need:</h2>
+	<ul class="govuk-list govuk-list--bullet">
+		<li>the Government Gateway login for your PAYE scheme</li>
+		<li>your accounts office reference number and employer <br>PAYE scheme reference</li>
+		<li>authority to add a PAYE scheme</li>
+		<li>authority to sign the agreement</li>
+	</ul>
+<br>
+<hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+
+
+<p>
+	Set up your account using the link below. This link will expire after 7 days. 
+</p>
+
+<p>
+	<a href="/1-0/registration/new-user?email-journey=true">http://www.manage-apprenticeships-service.gov.uk/registration/index </a>
+</p>
+
+<p>
+	If you'd prefer to no longer get these emails from your training provider, you can <a href="/2-0/provider-led-registration/unsubscribe">unsubscribe</a>. 
+</p>
+
+<p>
+	If you didn't agree with your training provider to receive this invitation, you can <a href="#">let us know</a>. 
+</p>
+
+<p>
+	This message is automated, please don't reply. 
+</p>
+
+<p>
+	Thanks,<br>
+	Apprenticeship Service Team 
+</p>
+{% endblock %}

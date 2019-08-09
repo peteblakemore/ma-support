@@ -1,0 +1,350 @@
+
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+
+    <meta charset="utf-8" />
+    <title>Home - Manage apprentices</title>
+    <!--[if gt IE 8]><!-->
+    <link href="https://accounts.manage-apprenticeships.service.gov.uk/dist/css/govuk-template.css" media="screen" rel="stylesheet" /><!--<![endif]-->
+    <!--[if IE 6]><link href="https://accounts.manage-apprenticeships.service.gov.uk/dist/css/govuk-template-ie6.css" media="screen" rel="stylesheet" /><![endif]-->
+    <!--[if IE 7]><link href="https://accounts.manage-apprenticeships.service.gov.uk/dist/css/govuk-template-ie7.css" media="screen" rel="stylesheet" /><![endif]-->
+    <!--[if IE 8]><link href="https://accounts.manage-apprenticeships.service.gov.uk/dist/css/govuk-template-ie8.css" media="screen" rel="stylesheet" /><![endif]-->
+    <link href="https://accounts.manage-apprenticeships.service.gov.uk/dist/css/govuk-template-print.css" media="print" rel="stylesheet" />
+    <!--[if IE 8]><link href="https://accounts.manage-apprenticeships.service.gov.uk/dist/css/fonts-ie8.css" media="all" rel="stylesheet" /><![endif]-->
+    <!--[if gte IE 9]><!-->
+    <link href="https://accounts.manage-apprenticeships.service.gov.uk/dist/css/fonts.css" media="all" rel="stylesheet" /><!--<![endif]-->
+    <!--[if lt IE 9]><script src="https://accounts.manage-apprenticeships.service.gov.uk/dist/javascripts/ie.js"></script><![endif]-->
+    <link rel="shortcut icon" href="https://accounts.manage-apprenticeships.service.gov.uk/dist/images/favicon.ico" type="image/x-icon" />
+    <link rel="mask-icon" href="https://accounts.manage-apprenticeships.service.gov.uk/dist/images/gov.uk_logotype_crown.svg" color="#0b0c0c">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="https://accounts.manage-apprenticeships.service.gov.uk/dist/images/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="https://accounts.manage-apprenticeships.service.gov.uk/dist/images/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon-precomposed" sizes="76x76" href="https://accounts.manage-apprenticeships.service.gov.uk/dist/images/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon-precomposed" href="https://accounts.manage-apprenticeships.service.gov.uk/dist/images/apple-touch-icon-60x60.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta property="og:image" content="https://accounts.manage-apprenticeships.service.gov.uk/dist/images/opengraph-image.png">
+
+    <link href="https://accounts.manage-apprenticeships.service.gov.uk/dist/css/select2.min.css" media="all" rel="stylesheet" />
+
+    <!--[if gt IE 8]><!-->
+    <link href="https://accounts.manage-apprenticeships.service.gov.uk/bundles/screen?v=_wYc3S4r5iUpyVK381AqD4URVMLHgtw3Rkg7j-gDJFQ1" media="all" rel="stylesheet" />
+    <!--<![endif]-->
+
+<style>
+
+        .dashboard-heading {
+            font-size: 22px;
+            color: #6f777b;
+            margin-top: 30px;
+        }
+
+        @media (min-width: 641px) {
+            .dashboard-heading {
+                font-size: 27px;
+            }
+        }
+
+        .dashboard-heading-company {
+            margin-top: 0;
+            margin-bottom: .2em;
+            padding-bottom: .3em;
+            border-bottom: 5px solid #bfc1c3;
+        }
+
+        .dashboard-section {
+            border-bottom: 2px solid #bfc1c3;
+            padding-bottom: 15px;
+        }
+
+        .dashboard-section-last {
+            padding-top: 30px;
+        }
+
+        .section-heading {
+            margin-top: .75em;
+        }
+
+        .section-description {
+            color: #6f777b;
+        }
+
+        @media (min-width: 641px) {
+            .section-description {
+                margin: -10px 0 30px;
+            }
+        }
+
+        .cards {
+            background: white;
+            margin: 0 -15px;
+            flex-wrap: wrap;
+            -ms-flex-wrap: wrap;
+        }
+
+        @media (min-width: 641px) {
+            .cards {
+                display: flex;
+                display: -ms-flex;
+            }
+        }
+
+        .card {
+            padding: 0 15px;
+            margin-bottom: 15px;
+            box-sizing: border-box;
+        }
+
+        @media (min-width: 641px) {
+            .card {
+                width: 50%;
+            }
+        }
+
+        .card > h3 {
+            margin-top: 0;
+            margin-bottom: .5em;
+        }
+
+        .card > p {
+            font-size: 14px;
+        }
+
+         @media (min-width: 641px) {
+            .card > p {
+                font-size: 16px;
+            }
+         }
+
+.das-favourites-link__icon {
+    width: 1.6em;
+    margin-right: 8px;
+}
+
+.das-favourites-link__text {
+    margin-top: 5px;
+}
+
+.das-favourites-link {
+    display: inline-flex;
+    align-items: center;
+    color: rgb(0, 94, 165);
+    line-height: 1;
+    margin-top: 5px;
+    margin-bottom: 0px;
+    text-decoration: underline;
+}
+
+
+</style>
+
+
+</head>
+<body id="page-company-homepage">
+
+    <!-- Google Tag Manager (noscript) -->
+    <noscript>
+        <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KWQBWGJ"
+                height="0" width="0" style="display:none;visibility:hidden"></iframe>
+    </noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <script>document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script>
+
+    <div id="skiplink-container">
+        <div>
+            <a href="#content" class="skiplink">Skip to main content</a>
+        </div>
+    </div>
+
+
+
+    <div id="global-cookie-message">
+        <p>
+            GOV.UK uses cookies to make the site simpler. <a href="/service/privacy">Find out more about cookies</a>
+        </p>
+    </div>
+
+
+    <header role="banner" id="global-header" class="with-proposition">
+        <div class="header-wrapper">
+            <div class="header-global">
+                <div class="header-logo">
+                    <a href="/" title="Go to the GOV.UK homepage" id="logo" class="content">
+                        <img src="https://assets.publishing.service.gov.uk/static/gov.uk_logotype_crown_invert_trans-203e1db49d3eff430d7dc450ce723c1002542fe1d2bce661b6d8571f14c1043c.png" alt="" width="36" height="32"> GOV.UK
+                    </a>
+                </div>
+            </div>
+            <div class="header-proposition">
+                <div class="content">
+                    <a id="proposition-name" href="/">Manage apprenticeships</a>
+                </div>
+            </div>
+        </div>
+    </header>
+        <div id="floating-menu-holder">
+            <div class="account-information floating-menu" role="navigation">
+                <div class="js-float">
+                    <p class="floating-head-text">Your employer account </p>
+                    <nav id="user-nav">
+                        <ul>
+                            <li><a href="/service/help">Help</a></li>
+                                <li class="has-sub-menu">
+                                    <a href="/" role="menuitem">Settings</a>
+                                    <ul role="menu" class="js-hidden" id="settings-menu">
+                                        <li><a href="/service/accounts" role="menuitem" class="sub-menu-item">Your accounts</a></li>
+                                            <li><a href="/accounts/84VBNV/rename" role="menuitem" class="sub-menu-item">Rename account</a></li>
+                                        <li><a href="https://beta-login.apprenticeships.education.gov.uk/account/changepassword?clientId=easaccprd&amp;returnurl=https%3a%2f%2faccounts.manage-apprenticeships.service.gov.uk%2f%2fservice%2fpassword%2fchange" class="sub-menu-item">Change your password</a></li>
+                                        <li><a href="https://beta-login.apprenticeships.education.gov.uk/account/changeemail?clientId=easaccprd&amp;returnurl=https%3a%2f%2faccounts.manage-apprenticeships.service.gov.uk%2f%2fservice%2femail%2fchange" class="sub-menu-item">Change your email address</a></li>
+                                            <li><a href="/settings/notifications" class="sub-menu-item">Notification settings</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="signin" role="menuitem">Sign out</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+
+            <div class="header-organisation" role="navigation">
+                <nav class="header-inner">
+                    <ul id="global-nav-links">
+                        <li><a href="/1-1/post-registration/interim-homepage.html" class="" role="menuitem">Home</a></li>
+                        <li><a href="#" class="" role="menuitem">Finance</a></li>
+                            <li><a href="#" role="menuitem">Recruitment</a></li>
+                        <li><a href="#" class="" role="menuitem">Apprentices</a></li>
+                        <li><a href="#" class="" role="menuitem">Your team</a></li>
+                        <li><a href="#" class="" role="menuitem">Your organisations and agreements</a></li>
+                        <li><a href="#" class="" role="menuitem">PAYE schemes</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+
+
+            <main class="govuk-main-wrapper govuk-main-wrapper--l" style="padding-top:5px" id="content">
+                <div class="breadcrumbs">
+                    <ol role="navigation">
+                        <li><a href="interim-homepage">Home</a></li>
+                        <li>PAYE schemes</li>
+                    </ol>
+                </div>
+            
+
+                <div class="grid-row header-index">
+                    <div class="column-two-thirds">
+                        <h1 class="heading-xlarge">PAYE schemes</h1>
+                        <p>You'll need to add all the PAYE schemes you intend to use to pay for apprenticeship training.</p>
+                    </div>
+                    <div class="column-one-third pull-right">
+                            <div>
+                                    <a href="#" class="button action-add">Add new scheme</a>
+                            </div>
+                    </div>
+                </div>
+                
+                <div class="grid-row">
+                    <div class="column-two-thirds">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Added PAYE schemes</th>
+                                        <th scope="col">English %</th>
+                                        <th scope="col"><span class="vh">Action</span></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                        <tr>
+                                            <td>
+                                                001/RA00104
+                                                <span class="secondary-text"></span>
+                                            </td>
+                
+                                                <td>100%</td>
+                
+                                            <td class="link-right">
+                                                <a aria-label="Details for PAYE scheme 001/RA00104"
+                                                   title="Details for PAYE scheme 001/RA00104"
+                                                   href="/accounts/MWDKDN/schemes/001_RA00104/details">Details<span class="vh"> for PAYE scheme 001/RA00104</span></a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                200/GDS00012
+                                                <span class="secondary-text"></span>
+                                            </td>
+                
+                                                <td>100%</td>
+                
+                                            <td class="link-right">
+                                                <a aria-label="Details for PAYE scheme 200/GDS00012"
+                                                   title="Details for PAYE scheme 200/GDS00012"
+                                                   href="/accounts/MWDKDN/schemes/200_GDS00012/details">Details<span class="vh"> for PAYE scheme 200/GDS00012</span></a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                343/AA00032
+                                                <span class="secondary-text"></span>
+                                            </td>
+                
+                                                <td>100%</td>
+                
+                                            <td class="link-right">
+                                                <a aria-label="Details for PAYE scheme 343/AA00032"
+                                                   title="Details for PAYE scheme 343/AA00032"
+                                                   href="/accounts/MWDKDN/schemes/343_AA00032/details">Details<span class="vh"> for PAYE scheme 343/AA00032</span></a>
+                                            </td>
+                                        </tr>
+                                </tbody>
+                            </table>
+                <details id="inform-english-percentage">
+                    <summary><span class="summary">What is English percentage?</span></summary>
+                    <div class="panel">
+                        <p>Your English percentage is provided by HMRC based on the data in your payroll submissions. It represents the proportion of your payroll that's paid to your employees that live in England.</p>
+                        <p>If you think there are any issues with your English percentage, check your payroll data to make sure your employees' address information is correct.</p>
+                    </div>
+                </details>    </div>
+                </div>
+                
+                
+                
+                    </main>
+                
+
+    <footer class="group js-footer" id="footer" role="contentinfo">
+        <div class="footer-wrapper">
+            <div class="footer-meta">
+                <div class="footer-meta-inner">
+                    <ul class="platform-help-links">
+                        <li><a href="/service/help">Help</a></li>
+                        <li><a href="https://www.smartsurvey.co.uk/s/apprenticeshipservicefeedback/" target="_blank">Feedback</a></li>
+                        <li><a href="/service/privacy">Privacy and cookies</a></li>
+                        <li>Built by the <a href="http://gov.uk/esfa" target="_blank">Education and Skills Funding Agency</a></li>
+                    </ul>
+                    <div class="open-government-licence">
+                        <p class="logo">
+                            <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/" rel="license">Open Government Licence</a>
+                        </p>
+                        <p>
+                            All content is available under the <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/" rel="license">Open Government Licence v3.0</a>, except where otherwise stated
+                        </p>
+                    </div>
+                </div>
+                <div class="copyright">
+                    <a href="http://www.nationalarchives.gov.uk/information-management/re-using-public-sector-information/copyright-and-re-use/crown-copyright/">© Crown copyright</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div id="global-app-error" class="app-error hidden"></div>
+
+    <script src="https://accounts.manage-apprenticeships.service.gov.uk/bundles/sfajs?v=epUSgYeWCRVXQtkrz6ow5Oe4hq4jkScFpxymodtHb7M1"></script>
+
+
+</body>
+</html>

@@ -1,0 +1,59 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Manage apprenticeships
+{% endblock %}
+
+{% set serviceName = "Manage apprenticeships" %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <span class="govuk-caption-xl">Email settings</span>
+        <h1 class="govuk-heading-xl">Unsubscribe from communications</h1>
+        <!-- <p class="govuk-body-lead">This service is for organisations that want to take on apprentices.</p> -->
+        <p>The key to any great relationship is communication. If you would like to change your preferences, and how we contact you please select your preferred options below.</p>
+        <br>
+        <div class="govuk-form-group">
+            <label class="govuk-label" for="event-name">
+              <strong>Your email address you wish to unsubscribe</strong>
+            </label>
+            <!-- <span id="event-name-hint" class="govuk-hint">
+              The name you&#39;ll use on promotional material.
+            </span> -->
+            <input class="govuk-input" id="event-name" value="&nbsp; joe.bloggs@yourcompany.co.uk" name="event-name" type="text" aria-describedby="event-name-hint" disabled>
+          </div>
+          <br>
+        <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset" aria-describedby="nationality-hint">
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                <h1 class="govuk-fieldset__heading">
+                    Please choose what you would like to unsubscribe from:
+                </h1>
+              </legend>
+              <span id="nationality-hint" class="govuk-hint">
+                
+              </span>
+              <div class="govuk-checkboxes">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="nationality-1" name="nationality" type="checkbox" value="british" aria-describedby="nationality-1-item-hint">
+                  <label class="govuk-label govuk-checkboxes__label" for="nationality-1">
+                    Unsubscribe from email communications from this training provider
+                  </label> <span id="nationality-1-item-hint" class="govuk-hint govuk-checkboxes__hint">
+                    This will not affect the regular communications you receive as a registered user of our digital service
+                  </span> </div>
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="nationality-2" name="nationality" type="checkbox" value="irish">
+                  <label class="govuk-label govuk-checkboxes__label" for="nationality-2">
+                    Unsubscribe from all Apprenticeship Service communications
+                  </label> </div>
+              </div>
+            </fieldset>
+          </div>
+          <br>
+        <a href="unsubscribe-confirmation" class="govuk-button">Unsubscribe</a>
+    </div>
+</div>
+
+{% endblock %}

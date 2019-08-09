@@ -1,0 +1,37 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Manage apprenticeships
+{% endblock %}
+
+{% set serviceName = "Manage apprenticeships" %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+        <h1 class="govuk-heading-xl">Create an account to manage apprenticeships</h1>
+
+        <p class="govuk-body">Use this service to find and save apprenticeships.</p>
+
+        <p class="govuk-body">You can also:</p>
+        <ul class="govuk-list govuk-list--bullet">
+            <li>provide your PAYE scheme details to add apprentices</li>
+            <li>accept the employer agreement to get apprenticeship funding, add training providers and recruit apprentices</li>
+        </ul>
+
+        <p class="govuk-body">If you already have an account, <a href="signin" class="govuk-link--no-visited-state">sign in</a> using your email address.</p>
+
+        {% from "button/macro.njk" import govukButton %}
+
+        {{ govukButton({
+          text: "Create account",
+          href: "new-user",
+          classes: "govuk-button--start"
+        }) }}
+        
+    </div>
+</div>
+
+{% endblock %}

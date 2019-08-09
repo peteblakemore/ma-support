@@ -1,0 +1,97 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Manage apprenticeships
+{% endblock %}
+
+{% set serviceName = "Manage apprenticeships" %}
+
+{% if _referrer == "home" %}
+  {% set backLinkHref = "homepage-signAgreement" %}
+{% else %}
+  {% set backLinkHref = "check-your-details" %}
+{% endif %}
+
+{% set _orgName = data['orgName'] or "ASSURANCE AEROSPACE LTD" %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">Agreement between {{_orgName}} and the Education and Skills Funding Agency (ESFA)</h1>
+        
+      <p class="govuk-body">We updated the agreement on 1 May 2018.</p>
+    
+      <h2 class="govuk-heading-m">Key features of the agreement</h2>
+      <p class="govuk-body">{{_orgName}} must:</p>
+      <ul class="govuk-list govuk-list--bullet">
+          <li>only use the funding in their apprenticeship service account to train and assess apprentices</li>
+          <li>have a ‘contract for services’ with their training providers</li>
+          <li>follow the apprenticeship funding rules</li>
+      </ul>
+      <p class="govuk-body">The ESFA can:</p>
+      <ul class="govuk-list govuk-list--bullet">
+          <li>suspend payments, recover funds or close {{_orgName}}’s account if {{_orgName}} breaks the agreement</li>
+          <li>change the terms of the agreement and any part of the apprenticeship service</li>
+      </ul>
+
+      <h2 class="govuk-heading-m">The full agreement</h2>
+      <p class="govuk-body">View the full agreement, share or print it with the following link (opens in a new window or tab): <a href="agreement-govuk" target="_blank" class="govuk-link govuk-link--no-visited-state">https://www.gov.uk/government/publications/agreement-between-an-employer-and-the-education-and-skills-funding-agency-esfa</a></p>
+
+      <div class="govuk-warning-text">
+          <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+          <strong class="govuk-warning-text__text govuk-!-font-weight-bold">
+              <span class="govuk-warning-text__assistive">Warning</span>
+              The agreement is legally binding. If {{_orgName}} breaks it, we could close their account and stop them running apprenticeships.
+          </strong>
+      </div>
+
+      <form method="post" class="form">
+        
+
+          {% from "radios/macro.njk" import govukRadios %}
+          {% from "input/macro.njk" import govukInput %}
+          
+          {% set noHTML %}
+            {% if _referrer == "home" %}
+              <p class="govuk-body">You can accept the agreement later. {{_orgName}} will not be able to get or reserve funding until you accept.</p>
+            {% else %}
+              <p class="govuk-body">You can continue registering and accept the agreement later. {{_orgName}} will not be able to get or reserve funding until you accept.</p>
+            {% endif %}
+          {% endset -%}
+          
+          {{ govukRadios({
+            idPrefix: "agreementSign",
+            name: "agreementSign",
+            fieldset: {
+              legend: {
+                text: "Do you accept the agreement?",
+                isPageHeading: false,
+                classes: "govuk-fieldset__legend--m"
+              }
+            },
+            items: [
+              {
+                value: "yesSign",
+                text: "Yes, I have read the agreement and accept it"
+              },
+              {
+                value: "noSignLater",
+                text: "I’ll review it later",
+                conditional: {
+                  html: noHTML
+                }
+              }
+            ]
+          }) }}
+
+          <!-- Call to action button -->
+          <button class="govuk-button" >Continue</button>
+
+      </form>
+
+    </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,76 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Manage apprenticeships
+{% endblock %}
+
+{% set serviceName = "Manage apprenticeships" %}
+
+{% block content %}
+
+<style>
+    .govuk-header__container{
+        border-bottom: 10px solid #fd7742;  
+    }
+</style>
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+           <h1 class="govuk-heading-xl">
+             Review details
+           </h1>
+           <dl class="govuk-summary-list">
+
+              <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    Account name
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                    Assurance Aerospace
+                  </dd>
+                  <dd class="govuk-summary-list__actions">
+                    <a class="govuk-link" href="new-employer-user">
+                      Change<span class="govuk-visually-hidden"> contact information</span>
+                    </a>
+                  </dd>
+                </div>
+
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Name
+              </dt>
+              <dd class="govuk-summary-list__value">
+                Joe Bloggs
+              </dd>
+              <dd class="govuk-summary-list__actions">
+                <a class="govuk-link" href="new-employer-user">
+                  Change<span class="govuk-visually-hidden">name</span>
+                </a>
+              </dd>
+            </div>
+
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Email address
+              </dt>
+              <dd class="govuk-summary-list__value">
+                joebloggs@mymail.com
+              </dd>
+              <dd class="govuk-summary-list__actions">
+                <a class="govuk-link" href="new-employer-user">
+                  Change<span class="govuk-visually-hidden"> contact information</span>
+                </a>
+              </dd>
+            </div>
+
+
+
+          </dl>
+
+          <a href="register-employer-confirmation" class="govuk-button">Register employer</a>
+        <p style="padding-top:20px">
+    </div>
+</div>
+
+{% endblock %}

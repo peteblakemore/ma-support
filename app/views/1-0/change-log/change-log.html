@@ -1,0 +1,55 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Manage apprenticeships
+{% endblock %}
+
+{% set serviceName = "Manage apprenticeships" %}
+{% set backLinkHref = "/" %}
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+
+           <h1 class="govuk-heading-xl">
+             Full registration change log
+           </h1>
+           <table class="govuk-table">
+            <!-- <caption class="govuk-table__caption">Dates and amounts</caption> -->
+            <thead class="govuk-table__head">
+              <tr class="govuk-table__row">
+                <th class="govuk-table__header" scope="col">Date</th>
+                <th class="govuk-table__header" scope="col">Change description</th>
+                <th class="govuk-table__header" scope="col">Requested by</th>
+                <th class="govuk-table__header" scope="col">UR</th>
+              </tr>
+            </thead>
+            <tbody class="govuk-table__body">
+              <tr class="govuk-table__row">
+                <th class="govuk-table__header" scope="row">06/06/19</th>
+                <td class="govuk-table__cell">Remove back link on check details page for multi org routes, <br>as the change link takes you back to 'choose org'.</td>
+                <td class="govuk-table__cell">Hardip & Cathie</td>
+                <td class="govuk-table__cell">No</td>
+              </tr>
+
+              <tr class="govuk-table__row">
+                <th class="govuk-table__header" scope="row">07/06/19</th>
+                <td class="govuk-table__cell">Update first paragraph on 'Get apprenticeship funding' page - "If you're ready to pay for your apprenticeship training, you can do this now by adding the PAYE scheme for your organisation."</td>
+                <td class="govuk-table__cell">Cathie</td>
+                <td class="govuk-table__cell">No</td>
+              </tr>
+
+              <tr class="govuk-table__row">
+                <th class="govuk-table__header" scope="row">10/06/19</th>
+                <td class="govuk-table__cell">Selecting org not listed should navigate to companies house search</td>
+                <td class="govuk-table__cell">Hardip</td>
+                <td class="govuk-table__cell">No</td>
+              </tr>
+              
+            </tbody>
+          </table>
+
+    </div>
+</div>
+
+{% endblock %}

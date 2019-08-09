@@ -1,0 +1,36 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Manage apprenticeships
+{% endblock %}
+
+{% set serviceName = "Manage apprenticeships" %}
+{% set backLinkHref = "new-user" %}
+
+{% block content %}
+
+<div class="govuk-width-container">
+    <main class="govuk-main-wrapper govuk-main-wrapper--l">
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <form action="searchOrgResults" method="get" class="form">
+     <h1 class="govuk-heading-xl">Enter your organisation name</h1>
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+
+          <div class="govuk-form-group">
+              <label class="govuk-label  bold-label" for="orgName">Enter organisation name</label>
+              <input class="govuk-input"  id="orgChoose" name="orgChoose" type="text" aria-describedby="orgChoose">
+          </div>
+          </fieldset>
+        </div>
+        <button class="govuk-button">Continue</button>
+      </form>
+
+    </div>
+  </div>
+       
+  </div>
+{% endblock %}

@@ -1,0 +1,42 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Manage apprenticeships
+{% endblock %}
+
+{% set serviceName = "Manage apprenticeships" %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-xl">
+            Terms and conditions
+        </h1>
+        <!-- <p class="govuk-body-lead">This service is for organisations that want to take on apprentices.</p> -->
+        <p>To use this service, you agree to:</p>
+        <ul class="govuk-list govuk-list--bullet">
+            <li>sign out at the end of each session</li>
+            <li>input truthful and accurate information</li>
+            <li>adhere to the <a href="#" class="govuk-link--no-visited-state">Computer Misuse Act 1990</a></li>
+            <li>keep your sign in details secure</li>
+            <li>not use discriminatory wording as set out in the <a href="#" class="govuk-link--no-visited-state">Equality Act 2010</a></li>
+            <li>make sure the published rates of pay comply with the <a href="#" class="govuk-link--no-visited-state">National Minimum Wage</a> guidelines and are not misleading to candidates</li>
+            <li>adhere to all relevant <a href="#" class="govuk-link--no-visited-state">UK employment law</a></li>
+            <li>only use the recruitment section of the service if you pay the apprenticeship levy</li>
+            <li>your apprenticeship adverts being publicly accessible, including the possibility of partner websites displaying them</li>
+            <li>comply with the government safeguarding policies for <a href="#" class="govuk-link--no-visited-state">children</a> and <a href="#" class="govuk-link--no-visited-state">vulnerable adults</a></li>
+            <li>not provide feedback on a training provider where there is a conflict of interest</li>
+        </ul>
+        <p>Your contact details and information associated with your account will be collected and used for the support and administration of your account.</p>
+        <p>We will not:</p>
+            <ul class="govuk-list govuk-list--bullet">
+            <li>use or disclose this information for other purposes (except where we're legally required to do so)</li>
+            <li>use your details for any marketing purposes or for any reason unrelated to the use of your account</li>
+        </ul>
+        <br>
+        <p>We may update these terms and conditions at any time without notice. You'll agree to any changes if you continue to use this service ​after the terms and conditions have been updated​.</p>
+    </div>
+</div>
+
+{% endblock %}

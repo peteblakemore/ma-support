@@ -1,0 +1,244 @@
+
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+
+    <meta charset="utf-8" />
+    <title>Home - Manage apprentices</title>
+    <!--[if gt IE 8]><!-->
+    <link href="https://accounts.manage-apprenticeships.service.gov.uk/dist/css/govuk-template.css" media="screen" rel="stylesheet" /><!--<![endif]-->
+    <!--[if IE 6]><link href="https://accounts.manage-apprenticeships.service.gov.uk/dist/css/govuk-template-ie6.css" media="screen" rel="stylesheet" /><![endif]-->
+    <!--[if IE 7]><link href="https://accounts.manage-apprenticeships.service.gov.uk/dist/css/govuk-template-ie7.css" media="screen" rel="stylesheet" /><![endif]-->
+    <!--[if IE 8]><link href="https://accounts.manage-apprenticeships.service.gov.uk/dist/css/govuk-template-ie8.css" media="screen" rel="stylesheet" /><![endif]-->
+    <link href="https://accounts.manage-apprenticeships.service.gov.uk/dist/css/govuk-template-print.css" media="print" rel="stylesheet" />
+    <!--[if IE 8]><link href="https://accounts.manage-apprenticeships.service.gov.uk/dist/css/fonts-ie8.css" media="all" rel="stylesheet" /><![endif]-->
+    <!--[if gte IE 9]><!-->
+    <link href="https://accounts.manage-apprenticeships.service.gov.uk/dist/css/fonts.css" media="all" rel="stylesheet" /><!--<![endif]-->
+    <!--[if lt IE 9]><script src="https://accounts.manage-apprenticeships.service.gov.uk/dist/javascripts/ie.js"></script><![endif]-->
+    <link rel="shortcut icon" href="https://accounts.manage-apprenticeships.service.gov.uk/dist/images/favicon.ico" type="image/x-icon" />
+    <link rel="mask-icon" href="https://accounts.manage-apprenticeships.service.gov.uk/dist/images/gov.uk_logotype_crown.svg" color="#0b0c0c">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="https://accounts.manage-apprenticeships.service.gov.uk/dist/images/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="https://accounts.manage-apprenticeships.service.gov.uk/dist/images/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon-precomposed" sizes="76x76" href="https://accounts.manage-apprenticeships.service.gov.uk/dist/images/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon-precomposed" href="https://accounts.manage-apprenticeships.service.gov.uk/dist/images/apple-touch-icon-60x60.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta property="og:image" content="https://accounts.manage-apprenticeships.service.gov.uk/dist/images/opengraph-image.png">
+
+    <link href="https://accounts.manage-apprenticeships.service.gov.uk/dist/css/select2.min.css" media="all" rel="stylesheet" />
+
+    <!--[if gt IE 8]><!-->
+    <link href="https://accounts.manage-apprenticeships.service.gov.uk/bundles/screen?v=_wYc3S4r5iUpyVK381AqD4URVMLHgtw3Rkg7j-gDJFQ1" media="all" rel="stylesheet" />
+    <!--<![endif]-->
+
+<style>
+
+        .dashboard-heading {
+            font-size: 22px;
+            color: #6f777b;
+            margin-top: 30px;
+        }
+
+        @media (min-width: 641px) {
+            .dashboard-heading {
+                font-size: 27px;
+            }
+        }
+
+        .dashboard-heading-company {
+            margin-top: 0;
+            margin-bottom: .2em;
+            padding-bottom: .3em;
+            border-bottom: 5px solid #bfc1c3;
+        }
+
+        .dashboard-section {
+            border-bottom: 2px solid #bfc1c3;
+            padding-bottom: 15px;
+        }
+
+        .dashboard-section-last {
+            padding-top: 30px;
+        }
+
+        .section-heading {
+            margin-top: .75em;
+        }
+
+        .section-description {
+            color: #6f777b;
+        }
+
+        @media (min-width: 641px) {
+            .section-description {
+                margin: -10px 0 30px;
+            }
+        }
+
+        .cards {
+            background: white;
+            margin: 0 -15px;
+            flex-wrap: wrap;
+            -ms-flex-wrap: wrap;
+        }
+
+        @media (min-width: 641px) {
+            .cards {
+                display: flex;
+                display: -ms-flex;
+            }
+        }
+
+        .card {
+            padding: 0 15px;
+            margin-bottom: 15px;
+            box-sizing: border-box;
+        }
+
+        @media (min-width: 641px) {
+            .card {
+                width: 50%;
+            }
+        }
+
+        .card > h3 {
+            margin-top: 0;
+            margin-bottom: .5em;
+        }
+
+        .card > p {
+            font-size: 14px;
+        }
+
+         @media (min-width: 641px) {
+            .card > p {
+                font-size: 16px;
+            }
+         }
+
+.das-favourites-link__icon {
+    width: 1.6em;
+    margin-right: 8px;
+}
+
+.das-favourites-link__text {
+    margin-top: 5px;
+}
+
+.das-favourites-link {
+    display: inline-flex;
+    align-items: center;
+    color: rgb(0, 94, 165);
+    line-height: 1;
+    margin-top: 5px;
+    margin-bottom: 0px;
+    text-decoration: underline;
+}
+
+
+</style>
+
+
+</head>
+<body id="page-company-homepage">
+
+    <!-- Google Tag Manager (noscript) -->
+    <noscript>
+        <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KWQBWGJ"
+                height="0" width="0" style="display:none;visibility:hidden"></iframe>
+    </noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <script>document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script>
+    {% extends "layout.html" %}
+
+    {% block pageTitle %}
+      Manage apprenticeships
+    {% endblock %}
+    
+    {% set serviceName = "Manage apprenticeships" %}
+
+    {% block content %}
+
+    <div class="govuk-grid-row">
+            <div class="govuk-grid-column-full">
+                <h1 class="govuk-heading-xl govuk-!-margin-bottom-6">Set permissions</h1>
+            </div>
+            <div class="govuk-grid-column-two-thirds">
+                <p class="govuk-body">Set permissions for ABC TRAINING LIMITED to do tasks on behalf of JOE BLOGGS LTD?</p>
+            </div>
+        </div>
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-one-half">
+        <form method="post"><input name="__RequestVerificationToken" type="hidden" value="" />            <table class="govuk-table govuk-!-font-size-19">
+                        <thead class="govuk-table__head">
+                            <tr class="govuk-table__row">
+                                <th class="govuk-table__header">Permissions</th>
+                                <th class="govuk-table__header"></th>
+                            </tr>
+                        </thead>
+                        <tbody class="govuk-table__body">
+                                    <tr class="govuk-table__row">
+                                        <td class="govuk-table__cell">
+                                            <input data-val="true" data-val-required="The Value field is required." id="Operations_0__Value" name="Operations[0].Value" type="hidden" value="CreateCohort" />
+                                            Create cohort
+                                        </td>
+                                        <td class="govuk-table__cell">
+                                            <div class="govuk-form-group govuk-!-margin-bottom-0 govuk-!-margin-top-2">
+                                                <fieldset class="govuk-fieldset">
+                                                    <div class="govuk-radios govuk-radios--inline" data-module="radios">
+                                                        <div class="govuk-radios__item">
+                                                            <input class="govuk-radios__input" data-val="true" data-val-required="The IsEnabled field is required." id="operation-0-yes" name="Operations[0].IsEnabled" type="radio" value="True" />
+                                                            <label class="govuk-label govuk-radios__label" for="operation-0-yes">
+                                                                Yes
+                                                            </label>
+                                                        </div>
+                                                        <div class="govuk-radios__item">
+                                                            <input checked="checked" class="govuk-radios__input" id="operation-0-no" name="Operations[0].IsEnabled" type="radio" value="False" />
+                                                            <label class="govuk-label govuk-radios__label" for="operation-0-no">
+                                                                No
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                </fieldset>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr class="govuk-table__row">
+                                        <td class="govuk-table__cell">
+                                            <input data-val="true" data-val-required="The Value field is required." id="Operations_1__Value" name="Operations[1].Value" type="hidden" value="Recruitment" />
+                                            Recruitment
+                                        </td>
+                                        <td class="govuk-table__cell">
+                                            <div class="govuk-form-group govuk-!-margin-bottom-0 govuk-!-margin-top-2">
+                                                    <fieldset class="govuk-fieldset">
+                                                        <div class="govuk-radios govuk-radios--inline" data-module="radios">
+                                                            <div class="govuk-radios__item">
+                                                                <input class="govuk-radios__input" data-val="true" data-val-required="The IsEnabled field is required." id="operation-1-yes" name="Operations[1].IsEnabled" type="radio" value="True" />
+                                                                <label class="govuk-label govuk-radios__label" for="operation-1-yes">
+                                                                    Yes
+                                                                </label>
+                                                            </div>
+                                                            <div class="govuk-radios__item">
+                                                                <input checked="checked" class="govuk-radios__input" id="operation-1-no" name="Operations[1].IsEnabled" type="radio" value="False" />
+                                                                <label class="govuk-label govuk-radios__label" for="operation-1-no">
+                                                                    No
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                    </fieldset>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                        </tbody>
+                    </table>
+                    <a href="confirm-provider-permission" class="govuk-button">Confirm</a>
+
+        </form>    </div>
+        
+{% endblock %}

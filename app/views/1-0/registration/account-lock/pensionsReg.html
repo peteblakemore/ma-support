@@ -1,0 +1,54 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Manage apprenticeships
+{% endblock %}
+
+{% set serviceName = "Manage apprenticeships" %}
+{% set backLinkHref = "#" %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+<div class="govuk-grid-column-two-thirds">
+  <form method="post" class="form">
+     <h1 class="govuk-heading-xl">
+          Enter your PAYE scheme details
+        </h1>
+        <p>Enter your accounts office reference number and employer PAYE scheme reference. These details will be checked against the Pensions Regulator.</p>
+<!--         <div class="govuk-inset-text">You must have permission from your employer to add this information</div>
+ -->
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+
+          </legend>
+                      <div class="govuk-form-group">
+              <label class="govuk-label bold-label govuk-!-width-three-quarters" for="providerRegisterEmail">
+                  Accounts office reference number
+              </label>
+              <span id="email-hint" class="govuk-hint">
+               For example, 123PA12345678
+            </span>
+              <input class="govuk-input govuk-!-width-three-quarters" id="providerRegisterEmail" name="employerRegisterAORN" type="providerRegisterEmail" aria-describedby="email" value="">
+          </div>
+
+          <div class="govuk-form-group">
+              <label class="govuk-label govuk-!-width-three-quarters bold-label" for="providerRegisterFirstName">
+                 Employer PAYE scheme reference
+              </label>
+              <span id="email-hint" class="govuk-hint">
+             For example, 123/AB12345
+            </span>
+              <input class="govuk-input govuk-!-width-three-quarters" id="providerRegisterFirstName" name="employerRegisterPAYE" type="text" aria-describedby="PAYE number" value="">
+          </div>
+        </div>
+        <!-- <button class="govuk-button" type="submit">Continue</button> -->
+        <a href="pensionsRegReducedAttempts" class="govuk-button">Continue</a>
+        <a href="homepage-addPAYE" class="govuk-button clear-button" >Skip this step for now</a>
+
+      </form>
+
+    </div>
+  </div>
+{% endblock %}

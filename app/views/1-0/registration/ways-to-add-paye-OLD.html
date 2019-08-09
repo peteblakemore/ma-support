@@ -1,0 +1,71 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Manage apprenticeships
+{% endblock %}
+
+{% set serviceName = "Manage apprenticeships" %}
+{% set backLinkHref = "gov-funding" %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <form method="post" class="form">
+           <h1 class="govuk-heading-xl" style="margin-bottom: 20px;">
+             Ways to add your PAYE scheme
+           </h1>
+           <p class="govuk-heading-m">Is your annual payroll for your organisation<br> under £3 million?</p>
+           <h2 class="govuk-heading-s">Yes</h2>
+            <ul class="govuk-list govuk-list--bullet">
+               <li>Government Gateway login for your PAYE scheme</li>
+               <li>accounts office reference number and employer PAYE scheme reference</li>
+           </ul>
+
+           <h2 class="govuk-heading-s">No</h2>
+           <ul class="govuk-list govuk-list--bullet">
+            <li>Government Gateway login for your PAYE scheme</li>
+          </ul>
+
+          <h2 class="govuk-heading-s">Don't know</h2>
+          <ul class="govuk-list govuk-list--bullet">
+           <li>Government Gateway login for your PAYE scheme</li>
+         </ul>
+           <br>
+
+           <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset" aria-describedby="how-contacted-conditional-hint">
+
+              <div class="govuk-radios govuk-radios--conditional" data-module="radios">
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="ways-to-add-your-paye" name="ways-to-add-your-paye" type="radio" value="govgateway" data-aria-controls="conditional-how-contacted-conditional-1">
+                  <label class="govuk-label govuk-radios__label" for="how-contacted-conditional-1">
+                    I want to use Government Gateway
+                  </label> </div>
+
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="ways-to-add-your-paye" name="ways-to-add-your-paye" type="radio" value="aorn" data-aria-controls="conditional-how-contacted-conditional-2">
+                  <label class="govuk-label govuk-radios__label" for="how-contacted-conditional-2">
+                    I want to use my accounts office reference number and employer PAYE scheme reference
+                  </label> </div>
+
+
+              </div>
+            </fieldset>
+          </div>
+
+           <div class="govuk-warning-text">
+            <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+            <strong class="govuk-warning-text__text">
+              <span class="govuk-warning-text__assistive">Warning</span>
+              Before you continue, you must make sure you have authority to add PAYE schemes to the account for this organisation
+            </strong>
+          </div>
+
+           <button class="govuk-button">Continue</button>
+
+</form>
+    </div>
+</div>
+
+{% endblock %}

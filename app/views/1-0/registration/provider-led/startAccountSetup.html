@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Manage apprenticeships
+{% endblock %}
+
+{% set serviceName = "Manage apprenticeships" %}
+
+{% block content %}
+
+<style>
+.govuk-header__container{
+    border-bottom: 10px solid #fd7742;  
+}
+</style>
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-xl">
+            Start setting up an <br>employer account
+        </h1>
+         <p class="govuk-body-lead">Set up an apprenticeship service account for an employer.</p>
+        <h2 class="govuk-heading-m">Before you start</h2>
+        <ul class="govuk-list govuk-list--bullet">
+            <li>you'll need to have permission from the employer to use their details</li>
+            <li>you'll need to know the name and email address of the person you're setting up the account for</li>
+        </ul>
+        <br>
+        <a href="employer-permission" class="govuk-button govuk-button--start">Set up account</a>
+    </div>
+</div>
+
+{% endblock %}

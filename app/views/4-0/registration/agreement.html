@@ -1,0 +1,91 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Manage apprenticeships
+{% endblock %}
+
+{% set serviceName = "Manage apprenticeships" %}
+
+{% if _referrer == "home" %}
+  {% set backLinkHref = "homepage-signAgreement" %}
+{% else %}
+  {% set backLinkHref = "agreement-check" %}
+{% endif %}
+
+{% set _orgName = data['orgName'] or "ASSURANCE AEROSPACE LTD" %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">Agreement between {{_orgName}} and the ESFA</h1>
+      
+      <p class="govuk-body">We updated the agreement on 1 May 2018.</p>
+
+      <!-- <h2 class="govuk-heading-m">View, share or print the full agreement</h2> -->
+      <p class="govuk-body">View, share or print the agreement with the following link (opens in a new window or tab): <br><a href="agreement-govuk" target="_blank" class="govuk-link govuk-link--no-visited-state" style="word-wrap: break-word; word-break: break-all" >https://www.gov.uk/government/publications/agreement-between-an-employer-and-the-education-and-skills-funding-agency-esfa</a></p>
+
+      <div class="govuk-warning-text">
+          <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+          <strong class="govuk-warning-text__text govuk-!-font-weight-bold">
+              <span class="govuk-warning-text__assistive">Warning</span>
+              The agreement is legally binding. If {{_orgName}} breaks it, we could stop it hiring apprentices and close its account. 
+          </strong>
+      </div>
+
+      <form method="post" class="form">
+        
+
+          {% from "radios/macro.njk" import govukRadios %}
+          {% from "input/macro.njk" import govukInput %}
+          
+          {% set noText %}
+            {% if _referrer == "home" %}
+              You can accept the agreement later. {{_orgName}} will not be able to get or reserve funding until it accepts.
+            {% else %}
+              You can continue registering and accept the agreement later. {{_orgName}} will not be able to get or reserve funding until it accepts.
+            {% endif %}
+          {% endset -%}
+
+          {% set _legend %} 
+            Do you accept the agreement on behalf of {{_orgName}}?
+          {% endset -%}
+          {% set _yesText %} 
+            Yes, I have read the agreement and accept it
+          {% endset -%}
+          
+          {{ govukRadios({
+            idPrefix: "agreementSign",
+            name: "agreementSign",
+            fieldset: {
+              legend: {
+                text: _legend,
+                isPageHeading: false,
+                classes: "govuk-fieldset__legend--m"
+              }
+            },
+            items: [
+              {
+                value: "yesSign",
+                text: _yesText
+              },
+              {
+                value: "noSignLater",
+                text: "I’ll review it later",
+                hint: {
+                  text: noText
+                }
+              }
+            ]
+          }) }}
+
+          <!-- Call to action button -->
+          <button class="govuk-button" >Continue</button>
+
+      </form>
+
+    </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,68 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Manage apprenticeships
+{% endblock %}
+
+{% set serviceName = "Manage apprenticeships" %}
+{% set backLinkHref = "ways-to-add-paye" %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+<div class="govuk-grid-column-two-thirds">
+  <form method="post" class="form">
+     <h1 class="govuk-heading-xl">
+          Enter your PAYE scheme details
+        </h1>
+        <p>Enter your accounts office reference number and employer PAYE scheme reference. These details will be checked against the Pensions Regulator.</p>
+
+  <!-- <span id="national-insurance-number-error" class="govuk-error-message">
+  <span class="govuk-visually-hidden">Error:</span> You have 2 attempts remaining to enter a valid PAYE scheme and account office reference combination
+</span>  -->
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+
+          </legend>
+            <div class="govuk-form-group">
+              <div class="govuk-form-group govuk-form-group--error">
+                <label class="govuk-label" for="national-insurance-number">
+                  Accounts office reference number
+                </label>
+                <span id="national-insurance-number-hint" class="govuk-hint">
+                  For example, 123PA12345678
+                </span>
+                <span id="national-insurance-number-error" class="govuk-error-message">
+                  <span class="govuk-visually-hidden">Error:</span> Enter an accounts office reference number in the correct format
+                </span>
+                <input class="govuk-input govuk-input--error" id="national-insurance-number" name="national-insurance-number" type="text" aria-describedby="national-insurance-number-hint national-insurance-number-error">
+              </div>
+          </div>
+
+          <div class="govuk-form-group">
+            <div class="govuk-form-group govuk-form-group--error">
+              <label class="govuk-label" for="national-insurance-number">
+                Employer PAYE scheme reference
+              </label>
+              <span id="national-insurance-number-hint" class="govuk-hint">
+                For example, 123/AB12345
+              </span>
+              <span id="national-insurance-number-error" class="govuk-error-message">
+                <span class="govuk-visually-hidden">Error:</span> Enter a PAYE scheme reference in the correct format
+              </span>
+              <input class="govuk-input govuk-input--error" id="national-insurance-number" name="national-insurance-number" type="text" aria-describedby="national-insurance-number-hint national-insurance-number-error">
+            </div>
+
+
+          </div>
+        </div>
+        <button class="govuk-button" type="submit">Continue</button>
+        <!-- <a href="check-your-details-aorn" class="govuk-button">Continue</a> -->
+        <a href="homepage-addPAYE" class="govuk-button clear-button" >Skip this step for now</a>
+
+      </form>
+
+    </div>
+  </div>
+{% endblock %}
